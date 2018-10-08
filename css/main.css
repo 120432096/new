@@ -1,0 +1,732 @@
+/* only test */
+
+
+/* .fake{
+   background:tomato !important;
+}
+*/
+
+.fakeOFF::before {
+  position: absolute;
+  content: "";
+  background: tomato;
+  border-radius: 50%;
+  /* left: 0; */
+  bottom: 0;
+  right: 10px;
+  display: block;
+  width: 10px;
+  height: 10px;
+}
+
+
+/* only test end */
+
+canvas {
+  background: red;
+}
+
+
+/*
+canvas {
+  box-shadow: 0 0 0 1px gold;
+} */
+
+#palette {
+  display: none;
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  right: 0;
+  transition: 200ms;
+  transform: translateX(30px);
+}
+
+#palette:hover {
+  transform: translateX(0px);
+}
+
+.samples {
+  transition: 100ms;
+  width: 40px;
+  height: 30px;
+  /* border:1px solid; */
+  /* margin: 10px; */
+  box-shadow: inset 0px 4px 8px -4px rgba(0, 0, 0, 1);
+}
+
+#sample1 {
+  background: #E74D41;
+}
+
+#sample2 {
+  background: #EB4078;
+}
+
+#sample3 {
+  background: #AA46BB;
+}
+
+#sample4 {
+  background: #7C57C1;
+}
+
+#sample5 {
+  background: #5D6CC0;
+}
+
+#sample6 {
+  background: #738EFB;
+}
+
+#sample7 {
+  background: #29B4F6;
+}
+
+#sample8 {
+  background: #26C3D9;
+}
+
+#sample9 {
+  background: #26A498;
+}
+
+#sample10 {
+  background: #2BAE2B;
+}
+
+#sample11 {
+  background: #9BCB66;
+}
+
+#sample12 {
+  background: #D2DF56;
+}
+
+#sample13 {
+  background: #FCEC57;
+}
+
+#sample14 {
+  background: #FDC828;
+}
+
+#sample15 {
+  background: #FDA226;
+}
+
+body .samples.actColor,
+body .samples:hover {
+  transform: scale(1.2);
+  z-index: 23;
+  position: relative;
+  box-shadow: inset 0px 4px 0px -4px rgba(0, 0, 0, 1), 3px 0px 13px -2px rgba(0, 0, 0, 1);
+}
+
+
+/* body .samples.act{ */
+
+
+/* width: 40px; */
+
+
+/* left: -10px; */
+
+
+/* outline:7px solid; */
+
+
+/* box-shadow: inset 0 0 0px 2px rgba(0,0,0,0.8); */
+
+
+/*  } */
+
+body {
+  background: #ffc107;
+  background: #2196f3;
+  background: #ff5722;
+  background: #cddc39;
+  background: #e91e63;
+  background: #4caf50;
+  background: #ffeb3b;
+  background: #9c27b0;
+  background: #009688;
+  background: #3f51b5;
+  background: #f44336;
+  background: #8bc34a;
+  background: #673ab7;
+  background: #ff9800;
+  background: #00bcd4;
+  background: #795548;
+  background: #9e9e9e;
+  background: #607d8b;
+  background: #03a9f4;
+  background: #333;
+  background: rgba(15, 15, 15, 0.445)
+}
+
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  layerts*/
+
+body {
+  margin: 0;
+  padding: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: #141414;
+  background: #1F1F1F;
+  /* color: white; */
+  /* color:red; */
+  font-style: normal;
+  font-variant-ligatures: normal;
+  font-variant-caps: normal;
+  font-variant-numeric: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  font-size: 14px;
+  line-height: 16px;
+  font-family: "Open Sans", sans-serif;
+}
+
+button,
+input {
+  outline: none;
+  cursor: pointer;
+}
+
+#TEpanelR,
+#TEpanelL,
+#TEpanelT,
+#TEpanelB {
+  transition: 100ms;
+  position: fixed;
+  z-index: 1;
+  /* background: red; */
+  /* border: blue 3px solid; */
+  /* min-height: 10px; */
+  /* min-width: 10px; */
+}
+
+
+/* #TEpanelR {} */
+
+#TEpanelL {
+  top: 50px;
+  left: 3px;
+  border-radius: 3px;
+  padding: 2px 0;
+  /* height: calc(100vh -  50px); */
+  width: 32px;
+  /* background: #282828; */
+  /* background: #282828; */
+  z-index: 1;
+  transition: 100ms;
+}
+
+#TEpanelL button {
+  background: rgb(29, 29, 29);
+  color: wheat;
+  border: 1px solid rgba(109, 109, 109, 0.5);
+  margin: 2px;
+  height: 26px;
+  width: 26px;
+  border-radius: 3px;
+}
+
+#TEpanelL .a {
+  /* background: gold; */
+  border: gold solid 2px;
+  color: black;
+}
+
+#TEpanelT {
+  /* overflow: hidden; */
+  top: 0;
+  width: calc(100vw - 20px);
+  height: 0;
+  /* opacity: 0.1; */
+  z-index: 2;
+}
+
+#TEpanelT button {
+  background: #1f1f1f;
+  background: #000000dc;
+  color: white;
+  border: 1px solid black;
+  border-radius: 3px;
+  height: 30px;
+  margin: 5px 0 0 0;
+  top: 0;
+  left: 5px;
+  position: relative;
+}
+
+#TEpanelT button:hover {
+  /* background: #363636fa; */
+  /* background: black; */
+  border: 1px solid gold;
+}
+
+#TEprotect {
+  width: 300px;
+  /* background: red !important; */
+  /* background: url(https://knithub.ru/scheme/lock.svg) 10px 10px !important ; */
+  background-image: url(https://knithub.ru/scheme/lock.svg) !important;
+  background-size: 26px !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  width: 30px;
+}
+
+#TEprotect.on {
+  background: gold;
+  color: black;
+}
+
+#TEprotect.detect {
+  /*
+  background: red;
+  animation: shake1 0.82s cubic-bezier(.36, .07, .19, .97) both;
+  */
+  transform: translate3d(0, 0, 0);
+  /* transform: translate3d(10px, 10px, 10px); */
+  animation: shake2 0.82s cubic-bezier(.36, .07, .19, .97) infinite;
+  animation: detect 0.1s ease-in-out;
+  animation: detect 0.7s ease-in;
+  animation: detect 0.7s ease-in;
+  animation: detect 0.5s ease-out;
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+#TEprotect.detect:hover {
+  animation-play-state: paused;
+}
+
+@keyframes detect {
+  /* 10% {  box-shadow: inset 0px 0px 1px 26px rgba(255, 0, 0, 0);} */
+  10% {
+    box-shadow: inset 0px 0px 11px 26px rgba(255, 0, 0, 0);
+  }
+  50.001% {
+    /* box-shadow: inset 50px -40px 30px 0px rgba(255, 0, 0, 0.3); */
+  }
+  /* 51.002% {  box-shadow: inset -50px 40px 30px 0px rgba(255, 0, 0, 0.3);  } */
+  /* 90%{ box-shadow: inset 0px -0px 11px 0px rgb(255, 0, 0);} */
+  90% {
+    box-shadow: inset 0px -0px 14px -5px rgb(255, 0, 0);
+  }
+}
+
+@keyframes shake1 {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+@keyframes shake1_2 {
+  50% {
+    background: red;
+  }
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+@keyframes shake2 {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+#TEpanelT:hover {
+  opacity: 1;
+}
+
+#TEpanelB {
+  width: calc(100vw - 20px);
+  bottom: 0;
+}
+
+
+/*правая панель*/
+
+#TEpanelR {
+  z-index: 1;
+  /* width: 162px; */
+  overflow: auto;
+  overflow-x: hidden;
+  height: 100vh;
+  /* background: gold; */
+  position: fixed;
+  top: 0;
+  right: 0px;
+  background: #282828;
+}
+
+
+/*слой*/
+
+.TElayer {
+  opacity: 1;
+  transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out, opacity 0.45s ease-out;
+  transition: all 0.15s ease-out, opacity 0.30s ease-in;
+  transition: all 0.15s ease-out, opacity 0.30s ease-out;
+  /* transition: all 0.15s ease-out,opacity 0.06s ease-out; */
+  /* background: gold; */
+  transform: scale(1);
+  position: relative;
+  /* position: absolute; */
+  user-select: none;
+  overflow: hidden;
+  outline: none;
+  color: rgba(255, 255, 255, 0.7);
+  padding: 0 12px;
+  /* background: #282828; */
+  background: transparent;
+  /* background: #222; */
+  height: 36px;
+  width: 100%;
+  width: 170px;
+  border: none;
+  /* background: white; */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  /* border-bottom: 1px solid tomato; */
+  /* flex: 0 0 auto; */
+  /* display: flex; */
+}
+
+.TElayer:hover {
+  color: white;
+  background: #2f2f2f;
+  background: #242424;
+}
+
+.act::after,
+.TElayer:hover::after {
+  display: none;
+}
+
+
+/*иконка*/
+
+
+/* .TElayerIcon { */
+
+.TElayer img {
+  position: absolute;
+  margin: 7px 0 0 6px;
+  border: rgba(225, 225, 225, 0.09) 1px dashed;
+  width: 20px;
+  height: 20px;
+}
+
+.TElayerName {
+  cursor: default;
+  position: relative;
+  position: absolute;
+  margin: 10px 0px 0 37px;
+  white-space: nowrap;
+  /* откл перенос строк */
+  /* overflow: hidden; */
+  /*обрезание*/
+  /* text-overflow: ellipsis; */
+  /*точки*/
+}
+
+.act:hover {
+  color: #ffc61e;
+}
+
+.act {
+  color: #ffc61e;
+  /* background: t; */
+  background: #1f1f1f;
+}
+
+.TElayer::after {
+  top: 0;
+  right: 0;
+  position: absolute;
+  content: '';
+  /* Выводим элемент */
+  width: 21px;
+  /* Ширина градиента*/
+  height: 100%;
+  /* Высота родителя */
+  /* Градиент */
+  background: linear-gradient(to right, rgba(255, 204, 0, 0.1), #fc0 100%);
+  background: linear-gradient(to right, rgba(40, 40, 40, 0.3), rgba(40, 40, 40, 0.90) 50%, #282828 70%);
+  background: linear-gradient(to right, rgba(40, 40, 40, 0.4), #282828 93%);
+}
+
+.pulse {
+  transition: all 0s !important;
+  /* background: gold; */
+  opacity: 0;
+  /* transform: scale(0.8); */
+  /* transform: scaleX(0.2); */
+  /* transform-origin: 100% 100; */
+  transform: scale(1.1) translate(40px);
+}
+
+@media (max-width: 630px) {
+  /* body{background:red;} */
+  #TEpanelR {
+    /* background:gold !important; */
+    width: 32px;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  .TElayer {
+    height: 30px;
+    padding: 0;
+  }
+  .TElayer img {
+    margin-top: 4px;
+  }
+}
+
+
+/*#TODO фиговое качество*/
+
+#TEpanelL #TEpen {
+  background-image: url(https://knithub.ru/scheme/icons.png);
+  background-position: -188px -233px;
+  width: 38px;
+  height: 38px;
+}
+
+#TEpanelL #TEerase {
+  background-image: url(https://knithub.ru/scheme/icons.png);
+  background-position: -233px -143px;
+  width: 38px;
+  height: 38px;
+}
+
+#TEpanelL #TEdrag1 {
+  background-image: url(https://knithub.ru/scheme/icons.png);
+  background-position: -97px -233px;
+  width: 38px;
+  height: 38px;
+}
+
+
+/* tooltip */
+
+
+/* .jBox-container{
+   color:black;
+} */
+
+
+/* .jBox-Tooltip .jBox-container,
+.jBox-Tooltip .jBox-pointer:after { */
+
+
+/* border-color: purple; */
+
+
+/* background: rgb(10, 10, 10); */
+
+
+/* color:gold; */
+
+
+/* } */
+
+#box-create {
+  /* border:dashed; */
+  margin-top: -40px;
+  margin-bottom: -20px;
+  font-size: 14px;
+  /* background: red; */
+  color: black;
+  cursor: default;
+}
+
+#box-create input {
+  cursor: text;
+  border: 1px solid rgba(83, 83, 83, 0.493);
+  border-radius: 23px;
+  width: 60px;
+  height: 30px;
+  text-align: center;
+  font-size: 20px
+}
+
+#box-num h4 {
+  /* background: red; */
+  margin: 0px 0 7px;
+  font-weight: normal;
+  font-size: 16px;
+}
+
+#TEsave-stage {
+  /* background: red; */
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* border:3px solid blue; */
+  /* box-shadow: inset 0 0 0 1px blue; */
+  border-radius: 3px;
+  overflow: hidden;
+  /* position: relative; */
+  /* position: fixed; */
+  /* top: 0; */
+  /* position: absolute; */
+}
+
+#TEsave-opnion {
+  background: rgba(184, 184, 184, 0.452);
+  position: absolute;
+  width: calc(100% - 40px);
+  left: 0;
+  bottom: 0;
+  padding: 20px;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+#TEapply {
+  display: none;
+  background: rgb(4, 114, 0) !important;
+}
+
+#TEcancel {
+  display: none;
+  background: rgb(121, 0, 0) !important;
+}
+
+.rap #TEcancel,
+.rap #TEapply {
+  display: inline-block;
+}
+
+.rap #TEpanelL {
+  transform: translateX(-50px);
+}
+
+.rap #TEpanelB {
+  transform: translateY(50px);
+}
+
+.over #TEnaw {
+  display: inline-block;
+}
+
+
+/* скрыть кнопки  */
+
+#TEnaw,
+
+/* скыть кнопки перемещения к углу если схема маленькая */
+
+.rap #TEsave,
+.rap #TEcreate,
+.rap #TEsetting,
+.rap #TEprotect {
+  display: none;
+}
+
+#TEnaw {
+  position: relative;
+  top: 10px;
+  margin: 5px 0 0 0;
+  top: 2px;
+  left: 5px;
+  width: 30px;
+  height: 20px;
+}
+
+#TEnaw button {
+  padding: 0;
+  border-radius: 0;
+  /* background: blue; */
+  margin: 0 !important;
+  width: 20px;
+  height: 15px;
+  display: inline-block;
+  font-size: 11px;
+  position: absolute;
+}
+
+#TEnaw #TEtl {
+  top: 0;
+  left: 0;
+  border-top-left-radius: 4px;
+}
+
+#TEnaw #TEtr {
+  top: 0;
+  left: 19px;
+  border-top-right-radius: 4px;
+}
+
+#TEnaw #TEbl {
+  top: 14px;
+  left: 0;
+  border-bottom-left-radius: 4px;
+}
+
+#TEnaw #TEbr {
+  top: 14px;
+  left: 19px;
+  border-bottom-right-radius: 4px;
+}
+
+#TEnaw:hover,
+#TEtl:hover,
+#TEtr:hover,
+#TEbl:hover {
+  z-index: 1;
+}
